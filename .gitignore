@@ -1,0 +1,6 @@
+model/
+# tex
+*.aux
+*.log
+*.synctex.gz
+
