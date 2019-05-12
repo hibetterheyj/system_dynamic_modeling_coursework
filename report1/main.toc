@@ -12,11 +12,11 @@
 \contentsline {subsubsection}{\numberline {2.3.2}模型标记}{3}
 \contentsline {section}{\numberline {3}手推轮椅主体建模}{5}
 \contentsline {subsection}{\numberline {3.1}运动学分析}{5}
-\contentsline {subsection}{\numberline {3.2}各部分键合图导出}{5}
-\contentsline {subsection}{\numberline {3.3}手推轮椅部分键合图}{5}
-\contentsline {section}{\numberline {4}机电驱动模块建模}{6}
-\contentsline {subsection}{\numberline {4.1}电机模块键合图及其导出过程}{6}
-\contentsline {subsection}{\numberline {4.2}驱动轮部分键合图及其导出过程}{6}
-\contentsline {section}{\numberline {5}系统总体模型}{7}
-\contentsline {section}{参考文献}{8}
+\contentsline {subsection}{\numberline {3.2}各部分键合图导出}{6}
+\contentsline {subsection}{\numberline {3.3}手推轮椅部分键合图}{6}
+\contentsline {section}{\numberline {4}机电驱动模块建模}{7}
+\contentsline {subsection}{\numberline {4.1}电机模块键合图及其导出过程}{7}
+\contentsline {subsection}{\numberline {4.2}驱动轮部分键合图及其导出过程}{7}
+\contentsline {section}{\numberline {5}系统总体模型}{8}
+\contentsline {section}{参考文献}{9}
 \contentsfinish 
