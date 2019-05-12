@@ -16,8 +16,8 @@
 \contentsline {subsection}{\numberline {3.3}手推轮椅部分键合图}{8}
 \contentsline {section}{\numberline {4}机电驱动模块建模}{9}
 \contentsline {subsection}{\numberline {4.1}电机模块键合图及其导出过程}{10}
-\contentsline {subsection}{\numberline {4.2}其余部分键合图}{12}
-\contentsline {subsection}{\numberline {4.3}机电驱动模块键合图}{13}
-\contentsline {section}{\numberline {5}系统总体模型}{14}
-\contentsline {section}{参考文献}{15}
+\contentsline {subsection}{\numberline {4.2}电驱动模块其余部分键合图}{13}
+\contentsline {subsection}{\numberline {4.3}机电驱动模块键合图}{14}
+\contentsline {section}{\numberline {5}系统总体模型}{15}
+\contentsline {section}{参考文献}{16}
 \contentsfinish 
