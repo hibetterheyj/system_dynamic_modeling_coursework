@@ -1,5 +1,5 @@
 \contentsline {section}{\numberline {1}绪论}{1}
-\contentsline {subsection}{\numberline {1.1}研究背景与意义}{1}
+\contentsline {subsection}{\numberline {1.1}背景与意义}{1}
 \contentsline {subsection}{\numberline {1.2}本报告章节安排}{1}
 \contentsline {section}{\numberline {2}任务介绍}{2}
 \contentsline {subsection}{\numberline {2.1}建模对象描述}{2}
@@ -9,15 +9,15 @@
 \contentsline {subsection}{\numberline {2.2}建模问题提取}{3}
 \contentsline {subsection}{\numberline {2.3}模型假设与标记}{3}
 \contentsline {subsubsection}{\numberline {2.3.1}模型假设}{3}
-\contentsline {subsubsection}{\numberline {2.3.2}模型标记}{3}
+\contentsline {subsubsection}{\numberline {2.3.2}参数及其数学标记}{3}
 \contentsline {section}{\numberline {3}手推轮椅主体建模}{4}
 \contentsline {subsection}{\numberline {3.1}运动学分析}{4}
-\contentsline {subsection}{\numberline {3.2}各部分键合图导出}{6}
-\contentsline {subsection}{\numberline {3.3}手推轮椅部分键合图}{8}
-\contentsline {section}{\numberline {4}机电驱动模块建模}{9}
-\contentsline {subsection}{\numberline {4.1}电机模块键合图及其导出过程}{10}
+\contentsline {subsection}{\numberline {3.2}手推轮椅主体各部分键合图}{6}
+\contentsline {subsection}{\numberline {3.3}手推轮椅主体部分键合图}{8}
+\contentsline {section}{\numberline {4}电驱动模块建模}{9}
+\contentsline {subsection}{\numberline {4.1}电驱动电机模块键合图}{10}
 \contentsline {subsection}{\numberline {4.2}电驱动模块其余部分键合图}{13}
-\contentsline {subsection}{\numberline {4.3}机电驱动模块键合图}{14}
-\contentsline {section}{\numberline {5}系统总体模型}{15}
-\contentsline {section}{参考文献}{16}
+\contentsline {subsection}{\numberline {4.3}机电驱动模块键合图}{15}
+\contentsline {section}{\numberline {5}系统总体键合图}{18}
+\contentsline {section}{参考文献}{19}
 \contentsfinish 

@@ -1,5 +1,5 @@
 \clearpage
-\section{机电驱动模块建模}
+\section{电驱动模块建模}
 
 %%%%%%%%%%%%%%%%%
 \begin{figure*}[!h]
@@ -23,7 +23,7 @@
 
 \clearpage
 
-\subsection{电机模块键合图及其导出过程}
+\subsection{电驱动电机模块键合图}
 
 首先对他励直流电机进行分析建模。作为机电驱动模块的核心，该部分我们既考虑了电路结构（包括主电路以及他励电路），也考虑了在输出扭矩时的机械损失。
 
@@ -48,7 +48,7 @@
 	\begin{figure*}[!h]
 		\centering
 		\includegraphics[width=1.05\textwidth]{fig/4_1_bond.pdf}
-		\caption{标注0-结与1-结。}\label{fig:4_1_bond}
+		\caption{电驱动模块电机模型键合图——标注0-结与1-结。}\label{fig:4_1_bond}
 	\end{figure*}
 	%%%%%%%%%%%%%%%%%
 	
@@ -60,7 +60,7 @@
 	\begin{figure*}[!h]
 		\centering
 		\includegraphics[width=0.92\textwidth]{fig/4_2_bond.pdf}
-		\caption{添加源和RCI元件。}\label{fig:4_2_bond}
+		\caption{电驱动模块电机模型键合图——添加源和RCI元件。}\label{fig:4_2_bond}
 	\end{figure*}
 	%%%%%%%%%%%%%%%%%
 	
@@ -76,7 +76,7 @@
 	%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\begin{equation}
-	\label{equ:U_a}
+	\label{equ:T}
 	T
 	=\
 	(C_t \Phi_e) * I_a
@@ -90,7 +90,7 @@
 	\begin{figure*}[!h]
 		\centering
 		\includegraphics[width=0.92\textwidth]{fig/4_3_bond.pdf}
-		\caption{添加回转器。}\label{fig:4_3_bond}
+		\caption{电驱动模块电机模型键合图——添加回转器。}\label{fig:4_3_bond}
 	\end{figure*}
 	%%%%%%%%%%%%%%%%%
 	
@@ -100,7 +100,7 @@
 	\begin{figure*}[!h]
 		\centering
 		\includegraphics[width=1.2\textwidth]{fig/4_4_bond.pdf}
-		\caption{电机模型电系统部分化简。}\label{fig:4_4_bond}
+		\caption{电机模型电系统键合图部分化简。}\label{fig:4_4_bond}
 	\end{figure*}
 	%%%%%%%%%%%%%%%%%
 	
@@ -110,7 +110,7 @@
 	\begin{figure*}[!h]
 		\centering
 		\includegraphics[width=1\textwidth]{fig/4_5_bond.pdf}
-		\caption{电机模型功率环化简。}\label{fig:4_5_bond}
+		\caption{电机模型键合图功率环化简。}\label{fig:4_5_bond}
 	\end{figure*}
 	%%%%%%%%%%%%%%%%%
 	
@@ -129,8 +129,8 @@
 	%%%%%%%%%%%%%%%%%
 	\begin{figure*}[!h]
 		\centering
-		\includegraphics[width=0.75\textwidth]{fig/4_6_bond.pdf}
-		\caption{标注速度1-结。}\label{fig:4_6_bond}
+		\includegraphics[width=0.7\textwidth]{fig/4_6_bond.pdf}
+		\caption{电驱动模块其余部分键合图——标注速度1-结。}\label{fig:4_6_bond}
 	\end{figure*}
 	%%%%%%%%%%%%%%%%%
 	
@@ -139,28 +139,75 @@
 	%%%%%%%%%%%%%%%%%
 	\begin{figure*}[!h]
 		\centering
-		\includegraphics[width=0.8\textwidth]{fig/4_6_bond.pdf}
-		\caption{电机模型电系统部分化简。}\label{fig:4_7_bond}
+		\includegraphics[width=0.85\textwidth]{fig/4_7_bond.pdf}
+		\caption{电驱动模块其余部分键合图——添加RCI元件。}\label{fig:4_7_bond}
 	\end{figure*}
 	%%%%%%%%%%%%%%%%%
 	
+	\item 添加变换器。其中，电驱动模块左右后轮的线速度和整个的质心角速度之间存在下面的关系，所以所添加的变换器为可调变换器。
+	%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{equation}
+	\label{equ:V_L}
+	V_L
+	=
+	V_{CG}-W_{CG} \times \frac{L_d}{2} \times \sin \theta
+	\ ,
+	\end{equation}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{equation}
+	\label{equ:V_R}
+	V_R
+	=
+	V_{CG}+W_{CG} \times \frac{L_d}{2} \times \sin \theta
+	\ ,
+	\end{equation}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	同时根据功率方向画出半箭头。	
+	如下图所示：
+	%%%%%%%%%%%%%%%%%
+	\begin{figure*}[!h]
+		\centering
+		\includegraphics[width=0.85\textwidth]{fig/4_8_bond.pdf}
+		\caption{电驱动模块其余部分键合图——添加变换器。}\label{fig:4_8_bond}
+	\end{figure*}
+	%%%%%%%%%%%%%%%%%
+	
+	\clearpage
+	
+	\item 模型功率环化简。
+	如下图所示：
+	%%%%%%%%%%%%%%%%%
+	\begin{figure*}[!h]
+		\centering
+		\includegraphics[width=0.85\textwidth]{fig/4_9_bond.pdf}
+		\caption{电驱动模块其余部分键合图功率环化简。}\label{fig:4_9_bond}
+	\end{figure*}
+	%%%%%%%%%%%%%%%%%
 	
 \end{enumerate}
 
-\clearpage
-
 \subsection{机电驱动模块键合图}
 
-相比于图xxx和图xxx，他励直流电动机与电动小车机械部分结合，它们之间通过一个减速齿轮箱连接，所以键合图连接的地方需要添加一个变换器。
+相比于图~\ref{fig:4_5_bond} 和图~\ref{fig:4_9_bond} ，他励直流电动机与电动小车机械部分结合，它们之间通过一个减速齿轮箱连接，所以键合图连接的地方需要添加一个变换器，得到图~\ref{fig:4_10_bond}（见下页）。
 
-最终得到构成机电驱动模块的各个部件组件的键合图，如图~\ref{fig:part2_bond} 示，该键合图模型分解为四个主要部分，前两个代表电动机和传动齿轮，而第二个显示车轮惯性，最后一个显示围绕整车质量 $M_d$ 和转动惯量 $J_d$ 惯性建立的轮椅结构的动力学。
+%%%%%%%%%%%%%%%%%
+\begin{figure*}[!t]
+	\centering
+	\includegraphics[width=0.96\textwidth]{fig/4_10_bond.pdf}
+	\caption{机电驱动模块键合图——两部分键合图拼接。}\label{fig:4_10_bond}
+\end{figure*}
+%%%%%%%%%%%%%%%%%
+
+\clearpage
+
+添加因果关系后，最终得到构成机电驱动模块的各个部件组件的键合图，如图~\ref{fig:part2_bond} 示。
 
 %%%%%%%%%%%%%%%%%
 \begin{figure*}[!h]
 	\centering
-	%\includegraphics[width=1.2\textwidth,angle=90]{fig/part2_bond.pdf}
-	\includegraphics[width=1.05\textwidth]{fig/part2_bond.pdf}
-	\caption{简化总体键合图。}\label{fig:part2_bond}
+	\includegraphics[width=0.92\textwidth]{fig/part2_bond.pdf}
+	\caption{机电驱动模块键合图——总体键合图。}\label{fig:part2_bond}
 \end{figure*}
 %%%%%%%%%%%%%%%%%
-
