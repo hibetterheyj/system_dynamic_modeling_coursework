@@ -1,4 +1,4 @@
-\newpage
+\clearpage
 \section{机电驱动模块建模}
 
 %%%%%%%%%%%%%%%%%
@@ -16,10 +16,12 @@
 %%%%%%%%%%%%%%%%%
 \begin{figure*}[!h]
 	\centering
-	\includegraphics[width=1\textwidth]{fig/MDM_scheme.png}
+	\includegraphics[width=1\textwidth]{fig/MDM_scheme.pdf}
 	\caption{机电驱动模块主要结构示意。}\label{fig:MDM_scheme} % schematic diagram
 \end{figure*}
 %%%%%%%%%%%%%%%%% 
+
+\clearpage
 
 \subsection{电机模块键合图及其导出过程}
 
@@ -30,26 +32,87 @@
 %%%%%%%%%%%%%%%%%
 \begin{figure*}[!h]
 	\centering
-	\includegraphics[width=1.1\textwidth]{fig/separately_excited_dc_motor.pdf}
+	\includegraphics[width=1\textwidth]{fig/separately_excited_dc_motor.pdf}
 	\caption{他励直流电机原理简图。}\label{fig:separately_excited_dc_motor} % schematic diagram
 \end{figure*}
 %%%%%%%%%%%%%%%%%
 
-详细补充过程.
+以下为具体建模过程：
 
-\subsubsection{主要过程}
-
-
-\subsubsection{键合图简化}
-
-
+\begin{enumerate}
+	\item 对于每一个确定的速度，标注速度1-结。
+	本装置一共有 8 个确定的（角）速度，即左/右后轮角速度，左/右后轮辐角速度，左/右后轮辐线速度，轮椅旋转角速度，轮椅质心角速度。
+	如下图所示：
+	
+	%%%%%%%%%%%%%%%%%
+	\begin{figure*}[!h]
+		\centering
+		\includegraphics[width=0.9\textwidth]{fig/3_1_bond.pdf}
+		\caption{标注速度节点。}\label{fig:4_1_bond}
+	\end{figure*}
+	%%%%%%%%%%%%%%%%%
+	
+	\clearpage
+	
+	\item 链接所有R,C,I元件，并且增加相应变换器与输入源（假设输入为推理作用产生的扭矩 $ \tau_L $ 和 $ \tau_R $ ）。同时根据功率方向画出半箭头。
+	
+	由于回转器上从势到流的关系，考虑加入调制回转器 MTF 插入在 $ V_s $ 与 $ W_c $ 的1-结之间
+	
+	如下图所示：
+	
+	%%%%%%%%%%%%%%%%%
+	\begin{figure*}[!h]
+		\centering
+		\includegraphics[width=0.9\textwidth]{fig/3_2_bond.pdf}
+		\caption{连接所有的RCI和源, 并增加变换器。}\label{fig:4_2_bond}
+	\end{figure*}
+	%%%%%%%%%%%%%%%%%
+	
+	\item 在1-结之间添加0结与RC元件。同时根据功率方向画出半箭头。
+	如下图所示：
+	
+	%%%%%%%%%%%%%%%%%
+	\begin{figure*}[!h]
+		\centering
+		\includegraphics[width=0.9\textwidth]{fig/3_3_bond.pdf}
+		\caption{在1-结之间添加0-结与RC元件。}\label{fig:4_3_bond}
+	\end{figure*}
+	%%%%%%%%%%%%%%%%%
+	
+	\item 简化总体键合图。可以简化功率环，即四处0-结。
+	如下图所示：
+	
+	%%%%%%%%%%%%%%%%%
+	\begin{figure*}[!h]
+		\centering
+		\includegraphics[width=0.85\textwidth]{fig/3_4_bond.pdf}
+		\caption{简化总体键合图。}\label{fig:4_4_bond}
+	\end{figure*}
+	%%%%%%%%%%%%%%%%%
+	
+	\item 标注因果关系。
+	
+\end{enumerate}
 
 \subsection{其余部分键合图}
 
-
+%%%%%%%%%%%%%%%%%
+\begin{figure*}[!h]
+	\centering
+	\includegraphics[width=0.85\textwidth]{fig/3_4_bond.pdf}
+	\caption{简化总体键合图。}\label{fig:4_5_bond}
+\end{figure*}
+%%%%%%%%%%%%%%%%%
 
 \subsection{机电驱动模块键合图}
 
 构成机电驱动模块的各个部件组件的键合图，如图xxx示，该键合图模型分解为四个主要部分，前两个代表电动机和传动齿轮，而第二个显示车轮惯性，最后一个显示围绕整车质量 $M_d$ 和转动惯量 $J_d$ 惯性建立的轮椅结构的动力学。
 
+%%%%%%%%%%%%%%%%%
+\begin{figure*}[!h]
+	\centering
+	\includegraphics[width=1.2\textwidth,angle=90]{fig/3_4_bond.pdf}
+	\caption{简化总体键合图。}\label{fig:part2_bond}
+\end{figure*}
+%%%%%%%%%%%%%%%%%
 
