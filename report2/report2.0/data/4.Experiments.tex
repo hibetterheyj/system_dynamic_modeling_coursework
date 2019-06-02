@@ -1,0 +1,59 @@
+\clearpage
+\section{实验阶段}
+
+\subsection{实验参数设定}
+
+表 \ref{tab:param} 列出本模型的相关参数及其数学标记。本报告中表示左右参数则分别以 $ \_L $ 和 $ \_R $表示。参数表主要分为分为整体系统参数，手推轮椅主体，机电驱动模块以及手推控制输入部分的参数四个部分。如下所示（见下页）：
+
+\begin{table}[H]
+	\footnotesize
+	\caption{系统主要参数及其数学标记}\label{tab:param}
+	\begin{longtable}{l|l|l}
+		\toprule
+		\textbf{数学标记} & \textbf{系统参数} & \textbf{设计值}\\
+		\midrule
+		\endhead
+		\multicolumn{3}{l}{\textbf{系统整体参数}} \\ % {占用行数} {文字居左中右} {内容}
+		\midrule
+		$ V_{\rm{CG}} $ & 质心速度 & \\
+		$ w_{\rm{CG}} $ & 质心转速 & \\
+		$ P_{\rm{CG}} $ & 系统动量变化率 & \\
+		$ P_{\theta} $ & 系统角动量变化率 & \\
+		\midrule
+		\multicolumn{3}{l}{\textbf{手推轮椅主体}} \\
+		\midrule
+		SE:$\tau$ & 后轮推进扭矩($ \mathrm{N} \cdot \mathrm{m} $) & 12 \\
+		$ J w $ & 后轮转动惯量($ \mathrm{kg} \cdot \mathrm{m}^2 $) & 0.005 \\
+		$ M_t $ & 系统质量 & \\
+		$ J t $ & 系统转动惯量 & \\
+		$ R_g $ & 轮胎与地面摩擦系数 & \\
+		$ C_w $ & 轮辐弹性系数 & \\
+		$ R_w $ & 轮辐阻尼 & \\
+		$ r $ & 后轮半径 & \\
+		$ L_w $ & 轮椅宽度 & \\
+		$ R_{wc} $ & 联轴器阻尼系数 & \\
+		$ C_{wc} $ & 联轴器弹性系数 & \\
+		\midrule
+		\multicolumn{3}{l}{\textbf{机电驱动模块}} \\
+		\midrule
+		$ I_e $ & 电机电感 & \\
+		$ R_e $ & 电机内阻 & \\
+		$ J_r $ & 转子转动惯量 & \\
+		$ R_b $ & 电机轴承阻尼 & \\
+		$ M_d $ & 机电驱动模块质量 & \\
+		$ J_d $ & 机电驱动模块转动惯量 & \\
+		$ L_d $ & 模块宽度 & \\
+		$ C_s $ & 电机输出转矩 & \\
+		$ R_s $ & 电机输出轴阻尼 & \\
+		$ k_1 $ & 电机扭矩系数 & \\ % 简化了k8
+		$ k_2 $ & 齿轮系数比 & \\ % 简化了k7
+		$ k_3 $ & 电动车轮半径 & \\ % 简化了k6
+		Se:L & 输入控制电压\\
+		\midrule
+		\multicolumn{3}{l}{\textbf{手推控制输入部分}}\\
+		\midrule
+		$ J $ & 手动轮转动惯量 & \\
+		$ k_4 $ & 手动轮半径 & \\ % 简化了k10
+		\bottomrule
+	\end{longtable}
+\end{table}

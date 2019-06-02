@@ -1,0 +1,30 @@
+\contentsline {section}{\numberline {1}键合图优化}{2}
+\contentsline {subsection}{\numberline {1.1}键合图因果划添加步骤}{2}
+\contentsline {section}{\numberline {2}手推轮椅主体（Manual Propelled Wheelchair） 框图建模}{3}
+\contentsline {subsection}{\numberline {2.1}状态空间方程推导}{3}
+\contentsline {subsubsection}{\numberline {2.1.1}后轮与地面运动状态变量$\mathaccentV {dot}E5F{p}_2 $}{3}
+\contentsline {subsubsection}{\numberline {2.1.2}后轮轮辐结构相关状态变量$\mathaccentV {dot}E5F{q}_6 $}{4}
+\contentsline {subsubsection}{\numberline {2.1.3}后轮与整体解耦相关状态变量$\mathaccentV {dot}E5F{q}_{11}$}{4}
+\contentsline {subsubsection}{\numberline {2.1.4}质心处状态分析（质量）状态变量$\mathaccentV {dot}E5F{ p}_{14} $}{5}
+\contentsline {subsubsection}{\numberline {2.1.5}质心处状态分析（转动惯量）状态变量$\mathaccentV {dot}E5F{ p}_{17}$}{6}
+\contentsline {subsubsection}{\numberline {2.1.6}根据对称性得到剩余状态方程}{7}
+\contentsline {subsection}{\numberline {2.2}总体状态空间矩阵}{7}
+\contentsline {subsubsection}{\numberline {2.2.1}状态空间矩阵导出}{7}
+\contentsline {subsubsection}{\numberline {2.2.2}特殊变量分析}{8}
+\contentsline {section}{\numberline {3}电动轮椅（Mmechatronic drive module） 框图建模}{10}
+\contentsline {subsection}{\numberline {3.1}状态空间方程推导}{10}
+\contentsline {subsubsection}{\numberline {3.1.1}状态变量$\mathaccentV {dot}E5F{ p_2 }$}{10}
+\contentsline {subsubsection}{\numberline {3.1.2}状态变量$\mathaccentV {dot}E5F{ p_6 }$}{11}
+\contentsline {subsubsection}{\numberline {3.1.3}状态变量$\mathaccentV {dot}E5F{ q_9 }$}{11}
+\contentsline {subsubsection}{\numberline {3.1.4}状态变量$\mathaccentV {dot}E5F{ p}_{13} $}{12}
+\contentsline {subsubsection}{\numberline {3.1.5}状态变量$\mathaccentV {dot}E5F{ q}_{19}$}{12}
+\contentsline {subsubsection}{\numberline {3.1.6}状态变量$\mathaccentV {dot}E5F{ p}_{22} $}{13}
+\contentsline {subsubsection}{\numberline {3.1.7}状态变量$\mathaccentV {dot}E5F{ p}_{25} $}{14}
+\contentsline {subsubsection}{\numberline {3.1.8}根据对称性得到剩余状态方程}{14}
+\contentsline {subsection}{\numberline {3.2}键合图转框图}{15}
+\contentsline {subsection}{\numberline {3.3}仿真结果}{15}
+\contentsline {section}{\numberline {4}实验阶段}{16}
+\contentsline {subsection}{\numberline {4.1}实验参数设定}{16}
+\contentsline {section}{\numberline {5}系统总体键合图}{17}
+\contentsline {section}{参考文献}{18}
+\contentsfinish 

@@ -19,8 +19,6 @@
 \contentsline {subsection}{\numberline {4.2}电驱动模块其余部分键合图}{13}
 \contentsline {subsection}{\numberline {4.3}机电驱动模块键合图}{15}
 \contentsline {section}{\numberline {5}系统总体键合图}{18}
-\contentsline {section}{\numberline {6}附录}{19}
-\contentsline {section}{\numberline {7}分工说明}{19}
-\contentsline {section}{\numberline {8}相关代码}{19}
+\contentsline {section}{\numberline {6}分工说明}{19}
 \contentsline {section}{参考文献}{20}
 \contentsfinish 
