@@ -70,7 +70,9 @@
 \usepackage{multirow} % 多行多列
 \usepackage{tabularx}
 \usepackage{ltxtable}
- 
+\newcolumntype{b}{>{\hsize=1.2\hsize}X}
+\newcolumntype{s}{>{\hsize=.2\hsize}X}
+\newcolumntype{m}{>{\hsize=.4\hsize}X}
 \newcommand{\tabincell}[2]{
 	\begin{tabular}{@{}#1@{}}#2\end{tabular}
 }%s控制水平居中，也能实现表格内换行

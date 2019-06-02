@@ -25,6 +25,12 @@
 \contentsline {subsection}{\numberline {3.3}仿真结果}{15}
 \contentsline {section}{\numberline {4}实验阶段}{16}
 \contentsline {subsection}{\numberline {4.1}实验参数设定}{16}
-\contentsline {section}{\numberline {5}系统总体键合图}{17}
-\contentsline {section}{参考文献}{18}
+\contentsline {subsection}{\numberline {4.2}Simulink相关模块运用和操作}{17}
+\contentsline {subsection}{\numberline {4.3}系统框图仿真}{21}
+\contentsline {subsubsection}{\numberline {4.3.1}MPW 仿真}{21}
+\contentsline {subsubsection}{\numberline {4.3.2}MDM 仿真}{21}
+\contentsline {subsection}{\numberline {4.4}仿真条件详细说明}{21}
+\contentsline {section}{\numberline {5}结论}{22}
+\contentsline {section}{\numberline {6}分工说明}{22}
+\contentsline {section}{参考文献}{23}
 \contentsfinish 
