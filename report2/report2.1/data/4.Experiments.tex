@@ -214,14 +214,83 @@
 	\end{figure}
 	%%%%%%%%%%%%%%%%%
 	
-	\subsection{系统框图仿真}
-	\subsubsection{MPW 仿真}
+	\clearpage
+	
+	\subsection{手推轮椅主体仿真}
+	
+	\subsubsection{MPW 整体框图介绍}
+	
+	%%%%%%%%%%%%%%%%%
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.9\textwidth]{fig/simulink/MPW_simulink1.png}
+		\caption{MPW 整体框图}\label{fig:MPW_simulink}
+	\end{figure}
+	%%%%%%%%%%%%%%%%%
+	
+	其中输入状态变量子系统主要由八个状态空间方程构成部分组成，	输出状态变量子系统由四个增益组成，如下所示：
+	%%%%%%%%%%%%%%%%%
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.88\textwidth]{fig/simulink/MPW_simulink_block1.png}
+		\caption{输入状态参量子系统-block1}
+	\end{figure}
+	%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=0.9\textwidth]{fig/simulink/MPW_simulink_block2.png}
+		\caption{输入状态参量子系统-block2}
+	\end{figure}
+	%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=0.9\textwidth]{fig/simulink/MPW_simulink_block3.png}
+		\caption{输入状态参量子系统-block3}
+	\end{figure}
+	%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%
+	\begin{figure}[b]
+		\centering
+		\includegraphics[width=0.75\textwidth]{fig/simulink/MPW_simulink_block4.png}
+		\caption{输出状态变量子系统}
+	\end{figure}
+	%%%%%%%%%%%%%%%%%
+	
+	\clearpage
+	
+	此外， rotation\_radius\_compution 函数代码如下所示：
+	%%%%%%%%%%%%%%%%%
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.9\textwidth]{fig/simulink/code.png}
+		\caption{rotation\_radius\_compution 函数代码}\label{fig:code}
+	\end{figure}
+	%%%%%%%%%%%%%%%%%
+	
+	\subsubsection{MPW 仿真与分析}
 	
 	
 	
-	\subsubsection{MDM 仿真}
+	\clearpage
+	\subsection{电驱动模块仿真}
+	
+	\subsubsection{MDM 整体框图介绍}
 	
 	
+	
+	\subsubsection{MDM 仿真与分析}
+	
+	%%%%%%%%%%%%%%%%%
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.9\textwidth]{fig/simulink/MDM_simulink1.png}
+		\caption{MDM 整体框图}\label{fig:MDM_simulink}
+	\end{figure}
+	%%%%%%%%%%%%%%%%%
+	
+	\clearpage
 	\subsection{仿真条件详细说明} 
 	
 	我们采用 ode15s 解法器而不采用刚性系统常用的 ode113 解法器。 
