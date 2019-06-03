@@ -1,0 +1,35 @@
+%main.tex
+\documentclass[a4paper]{article}
+%其余为默认值，需要的话再添加控制参数，详见《入门手册》
+
+%——————————————————————导言区——————————————————————
+
+\input{data/format}
+
+\begin{document}
+	\pagestyle{fancy}
+	\fancyhf{}  %全局设置，清空页眉页脚
+	\lhead{\includegraphics[scale=0.55]{fig/tongjilogo.png}}
+	\rhead{机电液系统数字化建模与设计课程报告（二）}
+	        
+	%——————————————————————摘要——————————————————————
+	%\include{data/Abstract} 否则会多一个空白页
+	%\input{data/Abstract}
+	
+	%——————————————————————目录—————————————————————— 
+	\input{data/contents}
+	%\contentsmargin{0pt}\renewcommand\contentspage{\thecontentspage}
+	%\dottedcontents{section}[2.3em]{\bfseries\addvspace{10pt}}{2.3em}{5pt}
+	%\dottedcontents{subsection}[5.5em]{}{3.2em}{5pt}
+	%\thispagestyle{fancy}
+	
+	%—————————————————————章节部分—————————————————————
+	\input{data/1.Bond_Graph}
+	\input{data/2.MPM_Modeling}
+	\input{data/3.MDM_Modeling}
+	\input{data/4.Experiments}
+	\input{data/5.Conclusion}
+	\input{data/Appendix}
+	\input{data/Reference}
+
+\end{document}

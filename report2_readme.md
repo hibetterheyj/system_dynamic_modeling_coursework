@@ -2,7 +2,7 @@ The model of the complex and mixed-domain dynamic systems can be simulated on th
 
 Some elements for the BG transposition to block diagram are proposed. The BG junctions are represented by the summing BD junctions, whilst the constitutive laws of elements are transcribed by classic blocks with gain, integrators or derivative blocks (in case of derivative causality) [10]. The following terms will be used in the 3-port junction elements: 
 
-复杂和混合域动态系统的模型可以在最常用的计算机软件上进行模拟，这些软件提供内置的数学和图形功能，如Matlab / Simulink，Modelec，Acsyde和Matrix / SystemBuild。 本节描述了将键合图模型转换为框图时所遵循的步骤，并使用熟悉的计算机软件（Matlab / Simulink）来模拟键合图模型。
+复杂和混合域动态系统的模型可以在最常用的计算机软件上进行模拟，这些软件提供内置的数学和图形功能，如Matlab / Simulink，Modelec，Acsyde和Matrix / SystemBuild。 本节描述了将键合图模型转换为框图时所遵循的步骤，并使用Matlab / Simulink来模拟键合图模型。
 
 ---
 

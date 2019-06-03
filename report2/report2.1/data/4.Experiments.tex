@@ -1,6 +1,8 @@
 \clearpage
 \section{实验阶段}
 
+复杂和混合域动态系统的模型可以在最常用的计算机软件上进行模拟，这些软件提供内置的数学和图形功能，如Matlab / Simulink，Modelec，Acsyde和Matrix / SystemBuild。 本节描述了将键合图模型转换为框图时所遵循的步骤，并使用Matlab / Simulink来模拟键合图模型。
+
 \subsection{实验参数设定}
 
 表 \ref{tab:param} 列出本模型的相关参数及其数学标记。本报告中表示左右参数则分别以 $ \_L $ 和 $ \_R $表示。参数表主要分为分为整体系统参数，手推轮椅主体，机电驱动模块以及手推控制输入部分的参数四个部分。如下所示：
@@ -233,28 +235,28 @@
 	\begin{figure}[htbp]
 		\centering
 		\includegraphics[width=0.88\textwidth]{fig/simulink/MPW_simulink_block1.png}
-		\caption{输入状态参量子系统-block1}
+		\caption{MPW 输入状态参量子系统-block1}
 	\end{figure}
 	%%%%%%%%%%%%%%%%%
 	%%%%%%%%%%%%%%%%%
 	\begin{figure}[ht]
 		\centering
 		\includegraphics[width=0.9\textwidth]{fig/simulink/MPW_simulink_block2.png}
-		\caption{输入状态参量子系统-block2}
+		\caption{MPW 输入状态参量子系统-block2}
 	\end{figure}
 	%%%%%%%%%%%%%%%%%
 	%%%%%%%%%%%%%%%%%
 	\begin{figure}[ht]
 		\centering
 		\includegraphics[width=0.9\textwidth]{fig/simulink/MPW_simulink_block3.png}
-		\caption{输入状态参量子系统-block3}
+		\caption{MPW 输入状态参量子系统-block3}
 	\end{figure}
 	%%%%%%%%%%%%%%%%%
 	%%%%%%%%%%%%%%%%%
 	\begin{figure}[b]
 		\centering
 		\includegraphics[width=0.75\textwidth]{fig/simulink/MPW_simulink_block4.png}
-		\caption{输出状态变量子系统}
+		\caption{MPW 输出状态变量子系统}
 	\end{figure}
 	%%%%%%%%%%%%%%%%%
 	
@@ -265,19 +267,53 @@
 	\begin{figure}[htbp]
 		\centering
 		\includegraphics[width=0.9\textwidth]{fig/simulink/code.png}
-		\caption{rotation\_radius\_compution 函数代码}\label{fig:code}
+		\caption{MPW 中 rotation\_radius\_compution 函数代码}\label{fig:code}
 	\end{figure}
 	%%%%%%%%%%%%%%%%%
 	
+	%\clearpage
 	\subsubsection{MPW 仿真与分析}
 	
+	表 \ref{tab:param} 给出了元件的一般特征和数值。在推进过程中施加在手边缘上的力是正弦的，包括在推动开始时的快速加载速率，导致冲击尖峰，然后逐渐施加和释放力
+	为了本研究的目的，系统用步进输入信号（代表手动扭矩）进行模拟，以产生避障预定轨迹。
+	主要目的是说明没有MDM参与的MPW系统的行为。
 	
+	如图所示，在两个轮上施加 2$ N \cdot m $ 范围内的阶跃信号的组合。
+	%%%%%%%%%%%%%%%%%
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[width=0.58\textwidth]{fig/simulation/MPW_tauL.pdf}
+		\caption{MPW 输入扭矩}\label{MPW_tauL}
+	\end{figure}
+	%%%%%%%%%%%%%%%%%
+	
+	观察位置和取向（参考x轴）系统在直线方向上产生一些运动，并导致后轮速度,质心处速度逐渐增大，如图所示。不过观察到，应该为0的质心处角速度慢慢上升，可能为系统仿真误差导致。
+	%%%%%%%%%%%%%%%%%
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[width=0.56\textwidth]{fig/simulation/MPW_wL.pdf}
+		\caption{MPW 后轮输出角速度}\label{MPW_wL}
+	\end{figure}
+	%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[width=0.56\textwidth]{fig/simulation/MPW_vCG.pdf}
+		\caption{MPW 质心处速度}\label{MPW_vCG}
+	\end{figure}
+	%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[width=0.56\textwidth]{fig/simulation/MPW_wCG.pdf}
+		\caption{MPW 质心处角速度}\label{MPW_wCG}
+	\end{figure}
+	%%%%%%%%%%%%%%%%%
 	
 	\clearpage
 	\subsection{电驱动模块仿真}
 	
 	\subsubsection{MDM 整体框图介绍}
-	
 	%%%%%%%%%%%%%%%%%
 	\begin{figure}[htbp]
 		\centering
@@ -286,7 +322,89 @@
 	\end{figure}
 	%%%%%%%%%%%%%%%%%
 	
+	其中输入状态变量子系统主要由十二个状态空间方程构成部分组成，输出状态变量子系统由四个增益组成，如下所示：
+	%%%%%%%%%%%%%%%%%
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[width=0.75\textwidth]{fig/simulink/MDM_simulink_block1.png}
+		\caption{MDM 输入状态参量子系统-block1}
+	\end{figure}
+	%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[width=0.75\textwidth]{fig/simulink/MDM_simulink_block2.png}
+		\caption{MDM 输入状态参量子系统-block2}
+	\end{figure}
+	%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[width=0.75\textwidth]{fig/simulink/MDM_simulink_block3.png}
+		\caption{MDM 输入状态参量子系统-block3}
+	\end{figure}
+	%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[width=0.75\textwidth]{fig/simulink/MDM_simulink_block4.png}
+		\caption{MDM 输入状态参量子系统-block4}
+	\end{figure}
+	%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%
+	\begin{figure}[!t]
+		\centering
+		\includegraphics[width=0.65\textwidth]{fig/simulink/MDM_simulink_block5.png}
+		\caption{MDM 输出状态变量子系统}
+	\end{figure}
+	%%%%%%%%%%%%%%%%%
+	
+	\clearpage
 	\subsubsection{MDM 仿真与分析}
+	在整个仿真过程中，考虑左右轮情况相同，则给出左轮相关参数变化图。
+	
+	如下图显示了输入电压$ v_L $
+	%%%%%%%%%%%%%%%%%
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[width=0.52\textwidth]{fig/simulation/MDM_v_L.pdf}
+		\caption{MDM 输入电压}\label{MDM_v_L}
+	\end{figure}
+	%%%%%%%%%%%%%%%%%
+	
+	MDM系统通过调节左右轮电动机的输入恒定电压，进而调节电动机的输出扭矩，由仿真图片可以知道，一开始的时候由于电动机的启动过程电流较大，使得做左右轮的扭矩出现一个突变，待电流稳定后，电动机的扭矩恒定，并作用在左右轮上使其产生角速度，MDM系统整体质心的线速度和角速度受左右轮运动的影响。由于一直有恒定电压输入，稳定时电动机有恒扭矩输出，如图 \ref{MDM_w_L} 和 \ref{MDM_vCG} 所示。。
+	所以系统质心速度和角速度恒加速度增加，如图 \ref{MDM_vCG} 和 \ref{MDM_wCG} 所示。
+	%%%%%%%%%%%%%%%%%
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.62\textwidth]{fig/simulation/MDM_T_L.pdf}
+		\caption{MDM 输出扭矩}\label{MDM_T_L}
+	\end{figure}
+	%%%%%%%%%%%%%%%%%
+	
+	%%%%%%%%%%%%%%%%%
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.62\textwidth]{fig/simulation/MDM_w_L.pdf}
+		\caption{MDM 后轮输出转速}\label{MDM_w_L}
+	\end{figure}
+	%%%%%%%%%%%%%%%%%
+	
+	%%%%%%%%%%%%%%%%%
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.62\textwidth]{fig/simulation/MDM_vCG.pdf}
+		\caption{MDM 质心处速度}\label{MDM_vCG}
+	\end{figure}
+	%%%%%%%%%%%%%%%%%
+	
+	%%%%%%%%%%%%%%%%%
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.62\textwidth]{fig/simulation/MDM_wCG.pdf}
+		\caption{MDM 质心处角速度}\label{MDM_wCG}
+	\end{figure}
+	%%%%%%%%%%%%%%%%%
 	
 	\clearpage
 	\subsection{仿真条件详细说明} 
@@ -299,5 +417,10 @@
 	
 	而 ode15s 是基于数值微分公式 (NDF) 的变阶求解器。NDF 与后向差分公式（BDF，也称为 Gear 方法）有关，但比后者更高效。ode15s 求解器以数值方式生成 Jacobian 矩阵。
 	在matlab建议下，如果怀疑某个问题是刚性问题，或者 ode45 失败或效率极其低下，请尝试 ode15s。经过测试，我们系统在 ode15s 解法器的仿真下，可以正常运行得到结果并且速度不慢故 ode15s 解法器可以满足我们的系统。
+	
+	\subsection{本章小结}
+	
+	在本章中，我们介绍了MPW和MDM的simulink模型的建模，分析和模拟工作及其与普通手动推进轮椅的耦合。仿真模型是在在第二三章节的状态空间方程导出的基础上建立的。
+	这些模型将有助于实现后续实时控制器的设计以及对于整体系统的分析。
 	
 \end{itemize}
